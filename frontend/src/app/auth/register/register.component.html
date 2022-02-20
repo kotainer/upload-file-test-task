@@ -1,0 +1,66 @@
+<div class="tui-container tui-container_adaptive register">
+  <div class="tui-row justify-center">
+    <div class="tui-col_8" [formGroup]="registerForm">
+      <h2 class="tui-text_h2 tui-form__header">Register user</h2>
+
+      <div class="tui-form__row">
+        <tui-input formControlName="login">
+          Type an login
+          <span class="tui-required"></span>
+          <input tuiTextfield type="text" />
+        </tui-input>
+
+        <tui-error
+          formControlName="login"
+          [error]="[] | tuiFieldError | async"
+        ></tui-error>
+      </div>
+
+      <div class="tui-form__row">
+        <tui-input-password formControlName="password" class="tui-space_top-2">
+          Type a password
+          <span class="tui-required"></span>
+          <input tuiTextfield />
+        </tui-input-password>
+
+        <tui-error
+          formControlName="password"
+          [error]="[] | tuiFieldError | async"
+        ></tui-error>
+      </div>
+
+      <div class="tui-form__row">
+        <tui-input-password
+          formControlName="repeatPassword"
+          class="tui-space_top-2"
+        >
+          Repeat a password
+          <span class="tui-required"></span>
+          <input tuiTextfield />
+        </tui-input-password>
+
+        <tui-error
+          formControlName="repeatPassword"
+          [error]="[] | tuiFieldError | async"
+        ></tui-error>
+      </div>
+
+      <div class="tui-form__buttons">
+        <button
+          tuiButton
+          type="button"
+          (click)="registerUser()"
+        >
+          Register
+        </button>
+
+        <a
+          class="tui-space_left-3"
+          tuiButton
+          appearance="flat"
+          routerLink="../login"
+        >Go to login</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<tui-island class="tui-space_top-2">
+  <p class="tui-island__category">{{file?.size || 0 | filesize}}</p>
+  <h3 class="tui-island__title">{{file?.name}}</h3>
+  <p class="tui-island__paragraph tui-island__paragraph_link">
+      <a [href]="downloadUrl" [download]="file.name" target="_blank">Download</a>
+  </p>
+</tui-island>

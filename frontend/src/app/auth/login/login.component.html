@@ -1,0 +1,48 @@
+<div class="tui-container tui-container_adaptive login">
+  <div class="tui-row justify-center">
+    <div class="tui-col_8" [formGroup]="loginForm">
+      <h2 class="tui-text_h2 tui-form__header">Login</h2>
+
+      <div class="tui-form__row">
+        <tui-input formControlName="login">
+          Type an login
+          <input tuiTextfield type="text" />
+        </tui-input>
+
+        <tui-error
+          formControlName="login"
+          [error]="[] | tuiFieldError | async"
+        ></tui-error>
+      </div>
+
+      <div class="tui-form__row">
+        <tui-input-password formControlName="password" class="tui-space_top-2">
+          Type a password
+          <input tuiTextfield />
+        </tui-input-password>
+
+        <tui-error
+          formControlName="password"
+          [error]="[] | tuiFieldError | async"
+        ></tui-error>
+      </div>
+
+      <div class="tui-form__buttons">
+        <button
+          tuiButton
+          type="button"
+          (click)="loginUser()"
+        >
+          Login
+        </button>
+
+        <a
+          class="tui-space_left-3"
+          tuiButton
+          appearance="flat"
+          routerLink="../register"
+        >Register new user</a>
+      </div>
+    </div>
+  </div>
+</div>

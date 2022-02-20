@@ -1,0 +1,33 @@
+<div class="tui-container tui-container_adaptive login">
+  <div class="tui-row justify-center">
+    <div class="tui-col_8">
+      <h2 class="tui-text_h2 tui-form__header">Add new file</h2>
+
+      <div class="tui-form__row">
+        <tui-input-file
+          [formControl]="fileControl"
+          [maxFileSize]="5000000"
+          size="l"
+        ></tui-input-file>
+      </div>
+
+      <div class="tui-form__buttons">
+        <button
+          tuiButton
+          type="button"
+          [disabled]="!fileControl.value"
+          (click)="uploadFile()"
+        >
+          Upload
+        </button>
+
+        <a
+          class="tui-space_left-3"
+          tuiButton
+          appearance="flat"
+          routerLink="../list"
+        >My files</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "dist/index.ts",
+  "scripts": {
+    "start": "nodemon",
+    "lint": "tslint --project .",
+    "test": "cross-env TS_NODE_FILES=true mocha -exit -r ts-node/register -colors ./test/**/*.ts",
+    "coverage": "nyc npm run test",
+    "build": "tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "author": "Butkov Viktor",
+  "license": "ISC",
+  "dependencies": {
+    "@kotainer/services-middlewares": "1.1.8",
+    "@types/app-root-path": "1.2.4",
+    "@types/config": "0.0.41",
+    "@types/jsonschema": "1.1.1",
+    "@types/koa": "2.13.4",
+    "@types/koa-cors": "^0.0.2",
+    "@types/koa-json": "2.0.20",
+    "@types/koa-logger": "3.1.2",
+    "@types/koa-router": "7.4.4",
+    "@types/koa-static": "^4.0.2",
+    "@types/mime-types": "^2.1.1",
+    "@types/mongoose": "5.11.97",
+    "@types/node": "17.0.18",
+    "@types/redis": "2.8.14",
+    "@types/uuid": "8.3.4",
+    "app-root-path": "3.0.0",
+    "config": "3.3.7",
+    "cross-env": "6.0.3",
+    "jsonschema": "1.4.0",
+    "koa": "2.13.4",
+    "koa-body": "4.2.0",
+    "koa-bodyparser": "4.3.0",
+    "koa-cors": "0.0.16",
+    "koa-json": "2.0.2",
+    "koa-logger": "3.2.1",
+    "koa-router": "10.1.1",
+    "koa-static": "^5.0.0",
+    "mime-types": "^2.1.34",
+    "mongoose": "6.2.2",
+    "redis": "2.8.0",
+    "typescript": "3.7.4",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/sinon": "^7.5.1",
+    "chai": "^4.2.0",
+    "husky": "^4.0.7",
+    "mocha": "^7.0.0",
+    "nodemon": "^2.0.2",
+    "nyc": "^15.0.0",
+    "sinon": "^8.0.3",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0"
+  }
+}

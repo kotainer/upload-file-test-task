@@ -1,0 +1,10 @@
+{
+    "appPort": 3000,
+    "db": {
+        "name": "users",
+        "host": "localhost",
+        "prefix": "users__"
+    },
+    "apiVersion": "v1",
+    "serviceName": "test_task-backend"
+}

@@ -1,0 +1,11 @@
+<div class="tui-container tui-container_adaptive login">
+  <div class="tui-row justify-center">
+    <div class="tui-col_8">
+      <h2 class="tui-text_h2 tui-form__header">Your files</h2>
+
+      <a tuiButton routerLink="../add">Upload new</a>
+
+      <user-file *ngFor="let file of files" [file]="file"></user-file>
+    </div>
+  </div>
+</div>
